@@ -16,6 +16,7 @@ class BukuController:
         self.view.btn_simpan.configure(command=self.simpan_data)
         self.view.btn_update.configure(command=self.update_data)
         self.view.btn_delete.configure(command=self.hapus_data)
+        self.view.btn_logout.configure(command=self.logout)
 
         # OTORISASI: Jika bukan admin, nonaktifkan form input dan semua tombol manipulasi data
         if self.user_role != "admin":
@@ -103,6 +104,11 @@ class BukuController:
                 self.muat_data_tabel()
             else:
                 messagebox.showerror("Error", "Gagal menghapus data.")
+
+    def logout(self):
+        from controllers.auth_controller import AuthController
+        self.view.destroy()
+        AuthController().run()
 
     def run(self):
         self.view.mainloop()
