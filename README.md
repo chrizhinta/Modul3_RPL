@@ -19,7 +19,7 @@ Modul3_RPL/
 │       └── ci_pipeline.yml
 ├── config/
 │   └── database.py
-├── controller/
+├── controllers/
 │   ├── anggota_controller.py
 │   ├── auth_controller.py
 │   └── buku_controller.py
@@ -31,7 +31,7 @@ Modul3_RPL/
 │   ├── anggota_view.py
 │   ├── buku_view.py
 │   └── login_view.py
-├── test/
+├── tests/
 │   ├── test_auth.py
 │   └── test_buku.py
 ├── main.py
